@@ -15,7 +15,7 @@ jspm_packages
 #Keys
 config/appkeys.js
 #Additional
-localModules/omdb/node_modules/*
+# localModules/omdb/node_modules/*
 #Images
 public/images
 #vscode

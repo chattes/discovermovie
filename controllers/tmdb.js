@@ -140,7 +140,6 @@ module.exports = {
 	startDiscover: function (req, res, next) {
 		moviedb.discoverMovie(query_en, function (err, list) {
 			if (err) {return console.log(err);}
-			// var firstList = movieDbList.concat(list.results);
 			_filter_movie(list.results);	
 			//Query Limitation has been set by TMDB API- 40 Queries ---10 Second Wait Time--->Next Query
 			for (var page_no = 2; page_no <= list.total_pages; page_no++) {

@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('discoverMovie:server');
 var http = require('http');
+var CronJob = require('cron').CronJob;
 
 /**
  * Get port from environment and store in Express.
@@ -87,3 +88,6 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+// new CronJob('05 * * * * *', function() {
+//   console.log('You will see this message every 5 second');
+// }, null, true, 'America/Los_Angeles');

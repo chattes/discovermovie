@@ -1,0 +1,31 @@
+{
+  "name": "omdb",
+  "version": "0.6.1",
+  "author": "Mister Hat <misterhat144@gmail.com>",
+  "description": "A module to access OMDb API.",
+  "keywords": [
+    "omdb",
+    "imdb",
+    "movies"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misterhat/omdb.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "durable-json-lint": "0.0.2",
+    "needle": "^1.0.0"
+  },
+  "devDependencies": {
+    "tap": "^6.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/misterhat/omdb/issues"
+  },
+  "homepage": "https://github.com/misterhat/omdb",
+  "scripts": {
+    "test": "node test.js"
+  }
+}

@@ -1,0 +1,22 @@
+#logs
+logs
+*.log
+npm-debug.log*
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+#Keys
+config/appkeys.js
+#Additional
+localModules/*/node_modules
+#Images
+public/images
+#vscode
+*.vscode

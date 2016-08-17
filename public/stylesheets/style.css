@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
+p.important{
+  padding: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+li.actor{
+display: inline;
+/* color: #7EC0EE; */
+color: #9999ff;
+font-weight: bold;
+padding-top:10px;
+/* border: 5px gray; */
+margin: 3px;
+
+
+}

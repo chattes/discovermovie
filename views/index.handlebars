@@ -1,0 +1,88 @@
+<div class="page-header">
+
+	<h2 class="panel-title">{{index.title}}</h2>	
+
+</div>
+<div class="row">
+	<ul class="media-list">
+		{{#each movies}}
+		<li class="media">
+		<div class="row">
+			<div class="col-sm-2 pull-left media-middle">
+				<img class="lazy img-thumbnail" data-original="{{ poster_path }}"  height="350" width="230">
+				<!-- <img lsrc="{{ poster_path }}" class="img&#45;thumbnail" height="350" width="230"> -->
+			</div>
+			<div class="col-sm-2 media-body pie">
+				<!-- #Filled dynamically on client side&#45;D3 -->
+
+			</div>
+			<div class="col-sm-8 media-body">
+				<div class="row">
+					<h4 class="media-heading"><b>{{ omdb.title }}</b></h4>
+					<p id="rating">{{ discoveryRating }}</p>
+
+				</div>
+				<!-- <p class="important" style="display:none">{{ overview }}</p> -->
+				<div class="row">
+					<!-- <p class="pull&#45;left"> {{ overview }}</p> -->
+					<p> {{ overview }}</p>
+				</div>
+				<div class="row">
+					<ul class="media-list">
+						{{#each omdb.actors}}
+						<!-- <li class="actor"> {{this}} </li> -->
+						<li class="actor"> {{this}} </li>
+						<!-- <p class="actor"> {{this}} </p> -->
+						{{/each}}
+
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+		</li>
+		{{/each}}
+
+	</ul>
+</div>
+<!-- Pagination&#45;Start -->
+{{#if pagination }}
+<!-- <div id="pagination" style="display:inline" class="col&#45;sm&#45;12 text&#45;center"> -->
+<div class="row">
+	<!-- <ul class="pagination"> -->
+	<!-- 	<li class="page&#45;item"> -->
+	<!-- 	<a class="page&#45;link" href="#" aria&#45;label="Previous"> -->
+	<!-- 		<span aria&#45;hidden="true">&#38;laquo;</span> -->
+	<!-- 		<span class="sr&#45;only">Previous</span> -->
+	<!-- 	</a> -->
+	<!-- 	</li> -->
+	<!-- 	{{times pages}} -->
+	<!-- 	<li class="page&#45;item"> -->
+	<!-- 	<a class="page&#45;link" href="#" aria&#45;label="Next"> -->
+	<!-- 		<span aria&#45;hidden="true">&#38;raquo;</span> -->
+	<!-- 		<span class="sr&#45;only">Next</span> -->
+	<!-- 	</a> -->
+	<!-- 	</li> -->
+	<!--  -->
+	<!-- </ul> -->
+
+
+	<div class="col-sm-12 text-center">
+		<ul class="pagination">
+			{{#paginate pagination type="previous"}}
+			<li {{#if disabled}}class="disabled"{{/if}}><a href="?p={{n}}" >Prev</a></li>
+			{{/paginate}}
+			{{#paginate pagination type="middle" limit="7"}}
+			<li {{#if active}}class="active"{{/if}}><a href="?p={{n}}">{{n}}</a></li>
+			{{/paginate}}
+			{{#paginate pagination type="next"}}
+			<li {{#if disabled}}class="disabled"{{/if}}><a href="?p={{n}}">Next</a></li>
+			{{/paginate}}
+		</ul>
+
+	</div>
+</div>
+{{/if}}
+
+
